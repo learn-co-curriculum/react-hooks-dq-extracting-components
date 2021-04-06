@@ -1,4 +1,8 @@
 import React from "react";
+import { messages, contacts } from "../data";
+
+console.log("Messages:", messages);
+console.log("Contacts:", contacts);
 
 function App() {
   return (
