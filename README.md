@@ -6,9 +6,9 @@ It's your job to refactor this component to several smaller components.
 
 To get started, run the application in the browser:
 
-```sh
-npm install
-npm start
+```console
+$ npm install
+$ npm start
 ```
 
 Start by discussing the demo app and decide what components you need. There's no
