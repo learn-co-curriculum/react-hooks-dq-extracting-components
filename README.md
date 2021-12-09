@@ -24,8 +24,8 @@ Once you've decided on your component hierarchy, it's time to start coding!
 
 The React docs have a good guide on [Extracting Components](https://reactwithhooks.netlify.app/docs/components-and-props.html#extracting-components).
 
-For each component you decided to make, create a new file and write your component code.
-Start by hard coding the JSX in the component:
+For each component you decided to make, create a new file and write your
+component code. Start by hard coding the JSX in the component:
 
 ```js
 // ResultItem.js
@@ -83,14 +83,16 @@ function App() {
 }
 ```
 
-Once you have your components working, have a look at the `src/components/App.js` file.
-You'll notice there are two arrays being imported in this file:
+Once you have your components working, have a look at the
+`src/components/App.js` file. You'll notice there are two arrays being imported
+in this file:
 
 ```js
 import { messages, contacts } from "../data";
 ```
 
-See if you can use these arrays to dynamically generate the contact list and messages for your app instead of hard-coding them!
+See if you can use these arrays to dynamically generate the contact list and
+messages for your app instead of hard-coding them!
 
 Check out the React docs on
 [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html) for a hint.
