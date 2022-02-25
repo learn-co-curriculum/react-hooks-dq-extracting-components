@@ -1,7 +1,5 @@
 import React from "react";
 import { messages, contacts } from "../data";
-import Contact from "./Contact";
-import Message from "./Message";
 
 console.log("Messages:", messages);
 console.log("Contacts:", contacts);
@@ -9,49 +7,54 @@ console.log("Contacts:", contacts);
 function App() {
   return (
     <div className="app">
-      <ContactList contacts={contacts} />
+      <nav>
+        <h2>Contacts</h2>
+        <ul className="contacts">
+          <li className="contact">
+            <div className="icon">A</div>
+            Angela
+          </li>
+          <li className="contact active">
+            <div className="icon">P</div>
+            Pamela
+          </li>
+          <li className="contact">
+            <div className="icon">S</div>
+            Sandra
+          </li>
+          <li className="contact">
+            <div className="icon">R</div>
+            Rita
+          </li>
+        </ul>
+      </nav>
       <main>
-        <MessageList messages={messages} />
+        <h2>Messages</h2>
+        <section className="messages">
+          <ul>
+            <li className="message sent">
+              <div className="icon">E</div>
+              <span className="content">One</span>
+            </li>
+            <li className="message received">
+              <div className="icon">P</div>
+              <span className="content">Two</span>
+            </li>
+            <li className="message sent">
+              <div className="icon">E</div>
+              <span className="content">Three four five</span>
+            </li>
+            <li className="message received">
+              <div className="icon">P</div>
+              <span className="content">🎺🎺🎺🎺🎺</span>
+            </li>
+          </ul>
+        </section>
         <form className="message-form">
           <input placeholder="Type a message..." />
         </form>
       </main>
     </div>
-  );
-}
-
-function ContactList({ contacts }) {
-  return (
-    <nav>
-      <h2>Contacts</h2>
-      <ul className="contacts">
-        {contacts.map((contact) => {
-          return <Contact name={contact.name} />;
-        })}
-      </ul>
-    </nav>
-  );
-}
-
-function MessageList({ messages }) {
-  return (
-    <>
-      <h2>Messages</h2>,
-      <section className="messages">
-        <ul>
-          {messages.map((message) => {
-            return (
-              <Message
-                key={message.id}
-                letter={message.name[0]}
-                content={message.content}
-                type={message.type}
-              />
-            );
-          })}
-        </ul>
-      </section>
-    </>
   );
 }
 
